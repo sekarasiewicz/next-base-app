@@ -11,7 +11,21 @@
   "dependencies": {
     "react": "latest",
     "react-dom": "latest",
-    "next": "latest"
+    "next": "latest",
+    "@apollo/client": "^3.8.3",
+    "@auth0/nextjs-auth0": "^3.1.0",
+    "@aws-sdk/client-s3": "^3.420.0",
+    "@aws-sdk/lib-storage": "^3.421.0",
+    "@aws-sdk/s3-request-presigner": "^3.420.0",
+    "@pothos/core": "^3.35.0",
+    "@pothos/plugin-prisma": "^3.59.2",
+    "@pothos/plugin-relay": "^3.43.1",
+    "@prisma/client": "^5.3.1",
+    "formidable": "^3.5.1",
+    "graphql": "^16.8.0",
+    "graphql-yoga": "^4.0.4",
+    "react-hook-form": "^7.46.2",
+    "react-hot-toast": "^2.4.1"
   },
   "devDependencies": {
     "typescript": "latest",
@@ -22,6 +36,10 @@
     "postcss": "latest",
     "tailwindcss": "latest",
     "eslint": "latest",
-    "eslint-config-next": "latest"
+    "eslint-config-next": "latest",
+    "ts-node": "^10.9.1"
+  },
+  "prisma": {
+    "seed": "ts-node prisma/seed.ts"
   }
 }

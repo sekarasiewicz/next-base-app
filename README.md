@@ -34,3 +34,21 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+```bash
+npx prisma db seed
+npx prisma migrate dev --name init
+
+## Run the following command to re-generate Prisma Client and Pothos types
+npx prisma generate
+
+or ;) 
+
+bun prisma generate
+
+## Run studio
+bun prisma studio
+
+ngrok http 3000 --authtoken "1YDQGFNugOpuLIylyTkafMoo7bA_6xYj89ZEKYPM371QVVkYb"
+npx ngrok http 3000 --authtoken "1YDQGFNugOpuLIylyTkafMoo7bA_6xYj89ZEKYPM371QVVkYb"
+```
