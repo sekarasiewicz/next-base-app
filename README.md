@@ -38,6 +38,7 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 ```bash
 npx prisma db seed
 npx prisma migrate dev --name init
+npx prisma migrate reset
 
 ## Run the following command to re-generate Prisma Client and Pothos types
 npx prisma generate
