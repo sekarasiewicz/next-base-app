@@ -1,4 +1,4 @@
-// pages/api/route.ts
+// pages/api/page.tsx
 
 import { createYoga } from 'graphql-yoga'
 import { schema } from '@/lib/graphql/schema'
