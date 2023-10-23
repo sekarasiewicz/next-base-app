@@ -18,6 +18,7 @@ if (__DEV__) {  // Adds messages only in a dev environment
   loadErrorMessages();
 }
 
+//TODO: How to get user and session on the server side
 export default function RootLayout({children}: {
   children: React.ReactNode
 }) {

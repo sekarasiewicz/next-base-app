@@ -2,7 +2,8 @@
 
 import { createYoga } from 'graphql-yoga'
 import { schema } from '@/lib/graphql/schema'
-import {createContext} from "@/lib/graphql/context";
+import { createContext } from "@/lib/graphql/context";
+import { NextResponse } from "next/server";
 
 
 const { handleRequest } =  createYoga({
@@ -11,7 +12,7 @@ const { handleRequest } =  createYoga({
     graphqlEndpoint: '/api/graphql',
     fetchAPI: {
         Request: Request,
-        Response: Response,
+        Response: NextResponse,
     }
 })
 

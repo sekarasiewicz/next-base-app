@@ -9,14 +9,14 @@ interface Props {
   id: string;
 }
 
-export const AwesomeLink: React.FC<Props> = ({
+export const AwesomeLink = ({
   imageUrl,
   url,
   title,
   category,
   description,
   id,
-}) => {
+}: Props) => {
   return (
     <div key={id} className="shadow  max-w-md  rounded">
       <Image src={imageUrl}  alt="image" width={200} height={200} priority />

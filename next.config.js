@@ -16,6 +16,14 @@ const nextConfig = {
             }
         ],
     },
+    // hack: https://github.com/aws/aws-sdk-js-v3/issues/5216
+    webpack: (config, {}) => {
+        config.externals.push({
+            '@aws-sdk/signature-v4-multi-region': 'commonjs @aws-sdk/signature-v4-multi-region',
+        })
+
+        return config
+    },
 }
 
 module.exports = nextConfig

@@ -43,7 +43,7 @@ export default function Admin() {
     data.append('file_type', file.type)
 
     toast.promise(
-      fetch(`/api/upload`, {
+      fetch(`/api/upload-image`, {
         method: 'POST',
         body: data,
       }),
