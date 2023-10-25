@@ -36,16 +36,17 @@ export default function Admin() {
   const uploadPhoto = async (e: React.ChangeEvent<HTMLInputElement>) => {
     if (!e.target.files || e.target.files.length <= 0) return
     const file = e.target.files[0]
-
-    const data = new FormData()
-    data.append('file', file)
-    data.append('file_name', file.name)
-    data.append('file_type', file.type)
+    const filename = encodeURIComponent(file.name)
+    const res = await fetch(`/api/upload-image?file=${filename}`)
+    const data = await res.json()
 
     toast.promise(
-      fetch(`/api/upload-image`, {
-        method: 'POST',
-        body: data,
+      fetch(data.url, {
+        method: 'PUT',
+        body: file,
+        headers: {
+          'Content-Type': file.type
+        }
       }),
       {
         loading: 'Uploading...',

@@ -13,6 +13,12 @@ const nextConfig = {
                 hostname: 'www.apollographql.com',
                 port: '',
                 pathname: '/**',
+            },
+            {
+                protocol: 'https',
+                hostname: 'seb-awesome-links.s3.amazonaws.com',
+                port: '',
+                pathname: '/**',
             }
         ],
     },

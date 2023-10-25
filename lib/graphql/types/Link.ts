@@ -46,7 +46,7 @@ builder.mutationField("createLink", (t) =>
             })
 
             if (!user || user.role !== "ADMIN") {
-                throw new Error("You don have permission ot perform this action")
+                throw new Error("You don have permission to perform this action")
             }
 
             return prisma.link.create({

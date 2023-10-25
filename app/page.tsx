@@ -38,9 +38,6 @@ export default function Home() {
     variables: { first: 2 },
   });
 
-  console.log("Home data", data)
-  console.log("Home loading", loading)
-
 
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Oh no... {error.message}</p>;
